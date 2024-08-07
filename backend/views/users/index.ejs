@@ -1,0 +1,41 @@
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body table-responsive">
+                <h4 class="mt-0 header-title">Users</h4>
+                
+
+                <table id="responsive-datatable" class="table table-bordered table-bordered dt-responsive nowrap">
+                    <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Created</th>
+                    </tr>
+                    </thead>
+
+
+                    <tbody>
+                    <% let serialNumber = 1; %>
+                    <% users[0].forEach(function(user) { %>
+                        <tr>
+                            <td><%= serialNumber++ %></td>
+                            <td><%= user.name %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.created_date %></td>
+                        </tr>
+                    <% }); %> 
+                    
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+    </div>
+</div> <!-- end row -->
+
+        
+
